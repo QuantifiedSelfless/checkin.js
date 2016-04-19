@@ -1,6 +1,5 @@
-//quantifiedselfbackend.local:7070
 $.ajax({
-  url: "https://iamadatapoint.com/api/showtimes",
+  url: "http://quantifiedselfbackend.local:7070/api/showtimes",
     type: "GET"
 })
 .done( (data, textStatus) => {
