@@ -17,24 +17,37 @@
         <div id="header-wrap" class="col-8 mx-auto flex flex-center center">
           <p class="flex-auto white arvo">DesignCraft</p>
           <img src="/static/images/logo.png" alt="DesignCraft Logo" />
-          <p class="flex-auto white arvo">Companion</p>
+          <p class="flex-auto white arvo">Event</p>
         </div>
       </div>
-      <div class="p2 center flex" id="login">
-        <p style="margin-right: 15px; color: white">Users</p>
-        <p>
-          <input type="text" list="users" id="userinput"/>
-          <datalist id="users">
-          </datalist>
-        </p>
-
-        <p style="margin-right: 15px; color: white">
-          RFID
-        </p>
-        <p>
-          <input type="text" id="rfid">
-          <button onclick="associate()">Associate</button>
-        </p>
+      <div class="p2 white" id="login">
+        <div class="mx-auto center col-10">
+          <p>Search for users by name. Once you have a user, click RFID then scan a BioBracelet. With the bracelet number in the box, click associate. User is now checked in. Clear the name to start with the next user.
+          </p>
+        </div>
+        <div class="center mx-auto flex flex-center px3">
+          <div class="flex-auto">
+          </div>
+          <div class="flex-auto mr2">
+            <h2>Users</p>
+            <p>
+              <input style="width: 100%; height: 100%; font-size:28px;" type="text" list="users" id="userinput"/>
+              <datalist id="users">
+              </datalist>
+            </p>
+          </div>
+          <div class="flex-auto ml2">
+            <h2>RFID</h2>
+            <p>
+              <input style="width: 100%; height: 100%; font-size:28px;" type="text" id="rfid">
+            </p>
+          </div>
+          <div class="flex-auto">
+          </div>
+        </div>
+        <div class="mx-auto center">
+          <button class="btn btn-primary center" onclick="associate()">Associate</button>
+        </div>
       </div>
       <div id='foot'>
       </div>
