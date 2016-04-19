@@ -1,5 +1,6 @@
+//quantifiedselfbackend.local:7070
 $.ajax({
-  url: "http://quantifiedselfbackend.local:7070/api/showtimes",
+  url: "https://iamadatapoint.com/api/showtimes",
     type: "GET"
 })
 .done( (data, textStatus) => {
@@ -20,7 +21,7 @@ $.ajax({
 })
 
 function unlockShow () {
-  var show_id = $("#showtime_list")[0].value;
+  var show_id = $("#showtime_list").find(":selected")[0].value;
   if (show_id.length < 2) {
     alert("Pick a show first")
     return;
@@ -32,7 +33,7 @@ function unlockShow () {
   for (var i = 0; i < inputs.length; i++) {
     var input = inputs[i];
     if(input.value.length > 2) {
-      url_params += "&passphrase=" + input.value
+      url_params += "&share=" + input.value;
     }
   }
 

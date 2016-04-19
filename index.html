@@ -17,24 +17,28 @@
         <div id="header-wrap" class="col-8 mx-auto flex flex-center center">
           <p class="flex-auto white arvo">DesignCraft</p>
           <img src="/static/images/logo.png" alt="DesignCraft Logo" />
-          <p class="flex-auto white arvo">Companion</p>
+          <p class="flex-auto white arvo">Event</p>
         </div>
       </div>
-      <div class="p2 center flex" id="login">
-        <p style="margin-right: 15px; color: white">Showtime </p>
-        <p>
-          <select id="showtime_list">
-          </select>
-        </p>
+      <div id="login">
+        <div class="mx-auto flex flex-column col-6"> 
+          <div class="mr3 white"> 
+            <p class="py2">Showtime </p>
+            <p> 
+              <select id="showtime_list">
+              </select>
+            </p>
 
-        <p style="margin-right: 15px; color: white">
-          Shares
-        </p>
-        <p>
-          <input type="text" class="share_secret">
-          <input type="text" class="share_secret">
-          <button onclick="unlockShow()">Unlock</button>
-        </p>
+            <p class="py2">
+              Shares
+            </p>
+            <p class="mb2">
+              <input type="text" class="share_secret">
+              <input type="text" class="share_secret">
+            </p>
+            <button class="btn btn-primary" onclick="unlockShow()">Unlock</button>
+          </div>
+        </div>
       </div>
       <div id='foot'>
       </div>
