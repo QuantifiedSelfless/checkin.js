@@ -1,4 +1,4 @@
-jQuery.ajax({
+$.ajax({
   url: "http://quantifiedselfbackend.local:7070/api/showtimes",
     type: "GET"
 })
