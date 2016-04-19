@@ -22,6 +22,7 @@ function associate () {
   })
   .done( (data) => {
     $("#rfid").val("");
+    $("#userinput").val("");
     reload();
     alert("Successfully checked in the user.");
   })
