@@ -55,9 +55,10 @@ function reload () {
     data.data.forEach( (user) => {
       usermap[user.name] = user.id;
       var option = document.createElement("option");
-      option.value = user.name + " " + user.email;
+      option.value = user.name
+      option.text = user.email;
       if (user.rfid != null) {
-        option.text = "Checked In"
+        option.text = user.email + " Checked In"
       }
       userList.append(option);
     });
