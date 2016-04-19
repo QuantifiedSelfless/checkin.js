@@ -1,5 +1,5 @@
 jQuery.ajax({
-    url: "https://iamadatapoint.com/api/showtimes",
+  url: "http://quantifiedselfbackend.local:7070/api/showtimes",
     type: "GET"
 })
 .done( (data, textStatus) => {
@@ -18,3 +18,32 @@ jQuery.ajax({
 .fail( () => {
   console.error("HTTP Request Failed");
 })
+
+function unlockShow () {
+  var show_id = $("#showtime_list")[0].value;
+  if (show_id.length < 2) {
+    alert("Pick a show first")
+    return;
+  }
+  
+  var url_params = "?showtime_id=" + show_id;
+  var inputs = $(".share_secret");
+  // change to share
+  for (var i = 0; i < inputs.length; i++) {
+    var input = inputs[i];
+    if(input.value.length > 2) {
+      url_params += "&passphrase=" + input.value
+    }
+  }
+
+  $.ajax({
+    url: "http://quantifiedselfbackend.local:6060/api/showtime/unlock" + url_params,
+    type: "GET"
+  })
+  .done( (data, textStatus) => {
+    window.location = "checkin.html";
+  })
+  .fail( (error) => {
+    alert("ERROR: " + error);
+  })
+}
