@@ -55,7 +55,7 @@ function reload () {
     data.data.forEach( (user) => {
       usermap[user.name] = user.id;
       var option = document.createElement("option");
-      option.value = user.name;
+      option.value = user.name + " " + user.email;
       if (user.rfid != null) {
         option.text = "Checked In"
       }
