@@ -24,12 +24,24 @@ function associate () {
     $("#rfid").val("");
     $("#userinput").val("");
     reload();
-    alert("Successfully checked in the user.");
+    inSuccess();
   })
   .fail( () => {
     alert("Something went wrong, request failed");
   })
 }
+
+function inSuccess() {
+  $( ".confirm" ).fadeIn( 1000, function() {
+    setTimeout(outSuccess, 4000);
+  });
+}
+
+function outSuccess() {
+  $(".confirm").fadeOut(1000);
+}
+
+
 
 function reload () {
   $.ajax({

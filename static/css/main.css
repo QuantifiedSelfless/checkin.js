@@ -58,6 +58,9 @@ body {
     font-size: 32px;
 }
 
+.confirm {
+    display: none;
+}
 
 
 .btn{
