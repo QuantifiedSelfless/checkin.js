@@ -55,7 +55,7 @@ body {
     border-bottom: thin solid #d2bb5d;
     min-height: 70vh;
     font-family: Quicksand;
-    font-size: 32px;
+    font-size: 22px;
 }
 
 .confirm {
@@ -65,5 +65,25 @@ body {
 
 .btn{
     background-color: #d2bb5d; 
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+    color: black;
+}
+
+th {
+    background-color: #d2bb5d;
+    color: white;
 }
 
