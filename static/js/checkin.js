@@ -45,6 +45,7 @@ function outSuccess() {
 
 
 function reload () {
+  $('#mytable').remove();
   createTable();
   $.ajax({
     url: "http://quantifiedselfbackend.local:6060/api/users/unlocked",
